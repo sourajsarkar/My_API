@@ -1,5 +1,6 @@
-require("dotenv").config(); // Load environment variables from a .env file
+// Load environment variables from a .env file
 const express = require("express");
+const dotenv = require("dotenv");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const User = require("./models/db");
@@ -7,6 +8,7 @@ const User = require("./models/db");
 const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.json());
+dotenv.config();
 
 // Enable CORS
 app.use(cors());
